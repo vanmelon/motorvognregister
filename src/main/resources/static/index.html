@@ -2,9 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Motorvognregister</title>
+    <link rel="stylesheet" href="Style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
+    <h1>Motorvognregister</h1>
+    <form>
+        <div id="tre">
+            <div class="TekstBoks">
+                <label for="persNum">Eiers personnummer: </label><br>
+                <input type="text" id="persNum" name="persNum" placeholder="000000-00000">
+            </div>
 
+            <div class="TekstBoks">
+                <label for="navn">Eiers navn: </label><br>
+                <input type="text" id="navn" name="navn" placeholder="skriv hær">
+            </div>
+
+            <div class="TekstBoks">
+                <label for="adresse">Eiers adresse: </label><br>
+                <input type="text" id="adresse" name="adresse" placeholder="osloveien 2">
+            </div>
+            <div class="TekstBoks">
+                <label for="kjennetegn">Kjennetegn: </label><br>
+                <input type="text" id="kjennetegn" name="kjennetegn" placeholder="GP34985">
+            </div>
+
+            <div class="TekstBoks">
+                <label for="bilmerke">Bilmerke: </label><br>
+                <input type="text" id="bilmerke" name="bilmerke" placeholder="Tesla">
+            </div>
+
+            <div class="TekstBoks">
+                <label for="biltype">Biltype: </label><br>
+                <input type="text" id="biltype" name="biltype" placeholder="E">
+            </div>
+        </div>
+    </form>
 </body>
 </html>
