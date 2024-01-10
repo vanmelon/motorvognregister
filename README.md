@@ -46,3 +46,20 @@ bruker 1 har ikke brukt motorvognregister før
 3. ja
 4. ja, slett alle ikke spesifikke
 5. sikke fornavn og etternavn, fulstendig adresse (by), spesifikk slett knapp får motorvogner
+
+## bruker 2
+bruker 2 har brukt motorvognregister før. han har også laget sit eget.
+
+1. bruker 2 ser at det er en motorvognregister
+2. ja, mangler postnummer og poststed. ikke persjonsnummer, med føtselsnummer. del fornavn og etternavn. burde ha farge på bil. biltype skal være bilmodel.
+3. bruker 2 greide og registrere en motorvogn
+4. briker gereide og registrer flere brukere
+5. trenger fungsjon får å slete en spesifikk motorvogn. greide å slete alle.
+
+## tibakemelingspørsmål bruker 2
+1. let og fårstå
+2. ja
+3. ja, fint presentert
+4. ja, slette alle, men har lyst å slete en spesifikk
+5. slete spesifikk og mere nyaktige registreringsbokser.
+
