@@ -1,8 +1,15 @@
-#Tekstbokser {
+.Teksbokser{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    margin-top: 1%;
+    margin-bottom: 1%;
 }
-.TekstBoks {
-    margin-left: 10px;
+
+.inputBox {
+    margin-right: 1%;
+}
+
+tr:nth-child(even) {
+    background-color: lightgray;
 }
