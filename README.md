@@ -63,3 +63,9 @@ bruker 2 har brukt motorvognregister før. han har også laget sit eget.
 4. ja, slette alle, men har lyst å slete en spesifikk
 5. slete spesifikk og mere nyaktige registreringsbokser.
 
+
+# Litteaturliste
+chatGPT: https://chat.openai.com
+w3schools: https://www.w3schools.com/java/default.asp
+
+
