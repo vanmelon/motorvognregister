@@ -53,7 +53,7 @@ bruker 2 har brukt motorvognregister før. han har også laget sit eget.
 1. bruker 2 ser at det er en motorvognregister
 2. ja, mangler postnummer og poststed. ikke persjonsnummer, med føtselsnummer. del fornavn og etternavn. burde ha farge på bil. biltype skal være bilmodel.
 3. bruker 2 greide og registrere en motorvogn
-4. briker gereide og registrer flere brukere
+4. bruker gereide og registrer flere brukere
 5. trenger fungsjon får å slete en spesifikk motorvogn. greide å slete alle.
 
 ## tibakemelingspørsmål bruker 2

@@ -29,7 +29,7 @@ function hentAlle() {
 }
 
 function formaterData(biler){
-    var ut = "<table>" +
+    let ut = "<table>" +
         "<tr>" +
         "<th>Eiers personnummer</th><th>Eiers navn</th> <th>Eiers adresse</th><th>Kjennetegn</th><th>Bilmerke</th><th>Biltype</th>" +
         "</tr>";
@@ -43,4 +43,27 @@ function slettAlle() {
     $.get( "/slettAlle", function( data ) {
         hentAlle();
     });
+}
+function slettEn() {
+    const persNum = $("#slettPersNum").val();
+
+    if (!persNum) {
+        alert("Skriv inn personnummeret for å slette en spesifikk motorvogn.");
+        return;
+    }
+
+    const url = "/slettEn?persNum=" + persNum;
+    $.ajax({
+        url: url,
+        type: 'DELETE',
+        success: function() {
+            hentAlle();
+            alert("Motorvogn slettet!");
+        },
+        error: function() {
+            alert("Feil ved sletting av motorvogn.");
+        }
+    });
+
+    $("#slettPersNum").val("");
 }

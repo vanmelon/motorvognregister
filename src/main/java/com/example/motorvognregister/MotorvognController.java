@@ -2,6 +2,8 @@ package com.example.motorvognregister;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,5 +22,10 @@ public class MotorvognController {
     @GetMapping("/slettAlle")
     public void slettAlle(){
         alleBiler.clear();
+    }
+
+    @DeleteMapping("/slettEn")
+    public void slettEn(@RequestParam String persNum) {
+        alleBiler.removeIf(motorvogn -> motorvogn.getPersNum().equals(persNum));
     }
 }
