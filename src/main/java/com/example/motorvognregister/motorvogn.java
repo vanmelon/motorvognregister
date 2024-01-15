@@ -2,19 +2,23 @@ package com.example.motorvognregister;
 
 public class motorvogn {
     private String persNum;
-    private String navn;
+    private String fornavn;
+    private String etternavn;
     private String adresse;
     private String kjennetegn;
     private String bilmerke;
     private String biltype;
+    private String bilfarge;
 
-    public motorvogn(String persNum, String navn, String adresse, String kjennetegn, String bilmerke, String biltype){
+    public motorvogn(String persNum, String navn,String etternavn, String adresse, String kjennetegn, String bilmerke, String biltype, String bilfarge){
         this.persNum = persNum;
-        this.navn = navn;
+        this.fornavn = navn;
+        this.etternavn = etternavn;
         this.adresse = adresse;
         this.kjennetegn = kjennetegn;
         this.bilmerke = bilmerke;
         this.biltype = biltype;
+        this.bilfarge = bilfarge;
     }
 
     public motorvogn() {
@@ -24,9 +28,11 @@ public class motorvogn {
     public String getPersNum() { return persNum; }
     public void setPersNum(String persNum) { this.persNum = persNum; }
 
-    public String getNavn() { return navn; }
-    public void setNavn(String navn) {
-        this.navn = navn;
+    public String getNavn() { return fornavn; }
+    public void setNavn(String navn) {this.fornavn = navn;}
+
+    public String getEtternavn() { return etternavn; }
+    public void setEtternavn(String navn) {
     }
 
     public String getAdresse() { return adresse; }
@@ -40,4 +46,8 @@ public class motorvogn {
 
     public String getBiltype() { return biltype; }
     public void  setBiltype(String biltype) { this.biltype = biltype;}
+
+    public String getBilfarge() { return bilfarge; }
+    public void  getBilfarge(String biltype) {
+    }
 }
