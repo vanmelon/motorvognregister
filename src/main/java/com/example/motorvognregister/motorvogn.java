@@ -10,9 +10,10 @@ public class motorvogn {
     private String biltype;
     private String bilfarge;
 
-    public motorvogn(String persNum, String navn,String etternavn, String adresse, String kjennetegn, String bilmerke, String biltype, String bilfarge){
+    // Konstruktør for å initialisere objektet med verdier
+    public motorvogn(String persNum, String fornavn, String etternavn, String adresse, String kjennetegn, String bilmerke, String biltype, String bilfarge) {
         this.persNum = persNum;
-        this.fornavn = navn;
+        this.fornavn = fornavn;
         this.etternavn = etternavn;
         this.adresse = adresse;
         this.kjennetegn = kjennetegn;
@@ -21,33 +22,73 @@ public class motorvogn {
         this.bilfarge = bilfarge;
     }
 
+    // Tom konstruktør, brukes hvis du vil opprette et objekt uten å sette verdier med en gang
     public motorvogn() {
-
     }
 
-    public String getPersNum() { return persNum; }
-    public void setPersNum(String persNum) { this.persNum = persNum; }
+    // Getter og setter metoder for hvert felt
 
-    public String getNavn() { return fornavn; }
-    public void setNavn(String navn) {this.fornavn = navn;}
-
-    public String getEtternavn() { return etternavn; }
-    public void setEtternavn(String navn) {
+    public String getPersNum() {
+        return persNum;
     }
 
-    public String getAdresse() { return adresse; }
-    public void setAdresse(String adresse) { this.adresse = adresse; }
+    public void setPersNum(String persNum) {
+        this.persNum = persNum;
+    }
 
-    public String getKjennetegn() { return kjennetegn;}
-    public void setKjennetegn(String kjennetegn) { this.kjennetegn = kjennetegn; }
+    public String getFornavn() {
+        return fornavn;
+    }
 
-    public String getBilmerke() { return bilmerke;}
-    public void setBilmerke(String bilmerke) { this.bilmerke = bilmerke; }
+    public void setFornavn(String fornavn) {
+        this.fornavn = fornavn;
+    }
 
-    public String getBiltype() { return biltype; }
-    public void  setBiltype(String biltype) { this.biltype = biltype;}
+    public String getEtternavn() {
+        return etternavn;
+    }
 
-    public String getBilfarge() { return bilfarge; }
-    public void  getBilfarge(String biltype) {
+    public void setEtternavn(String etternavn) {
+        this.etternavn = etternavn;
+    }
+
+    public String getAdresse() {
+        return adresse;
+    }
+
+    public void setAdresse(String adresse) {
+        this.adresse = adresse;
+    }
+
+    public String getKjennetegn() {
+        return kjennetegn;
+    }
+
+    public void setKjennetegn(String kjennetegn) {
+        this.kjennetegn = kjennetegn;
+    }
+
+    public String getBilmerke() {
+        return bilmerke;
+    }
+
+    public void setBilmerke(String bilmerke) {
+        this.bilmerke = bilmerke;
+    }
+
+    public String getBiltype() {
+        return biltype;
+    }
+
+    public void setBiltype(String biltype) {
+        this.biltype = biltype;
+    }
+
+    public String getBilfarge() {
+        return bilfarge;
+    }
+
+    public void setBilfarge(String bilfarge) {
+        this.bilfarge = bilfarge;
     }
 }

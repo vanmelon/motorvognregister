@@ -1,68 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
   <meta charset="UTF-8">
   <title>Motorvognregister</title>
-  <link rel="stylesheet" href="Style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <style>
+    /* Legg til egendefinerte stiler her */
+    .Teksbokser {
+      margin-bottom: 20px;
+    }
+  </style>
 </head>
-<body>
-  <h1>Motorvogn registrering</h1>
-  <h3>fyll in boksene og registrer</h3>
-  <form>
-    <div class="Teksbokser">
-      <div class="Tekstboks">
-        <label for="persNum">Eiers føtselsnummer: </label><br>
-        <input type="text" id="persNum" name="persNum" placeholder="000000 00000" title="Fyll ut personnummeret">
-      </div>
-
-      <div class="Tekstboks">
-        <label for="navn">Eiers fornavn: </label><br>
-        <input type="text" id="fornavn" name="fornavn" placeholder="Jane" title="Fyll ut fornavn">
-      </div>
-      <div class="Tekstboks">
-        <label for="navn">Eiers etternavn: </label><br>
-        <input type="text" id="etternavn" name="etternavn" placeholder="Doe" title="Fyll ut etternavn">
-      </div>
-
-      <div class="Tekstboks">
-        <label for="adresse">Eiers adresse: </label><br>
-        <input type="text" id="adresse" name="adresse" placeholder="osloveien 2" title="Fyll ut full adresse (gate, postnummer, sted)">
-      </div>
+<body class="container">
+<h1 class="mt-5">Motorvogn registrering</h1>
+<h3>Fyll inn boksene og registrer</h3>
+<form>
+  <div class="Teksbokser">
+    <div class="form-group">
+      <label for="persNum">Eiers fødselsnummer:</label>
+      <input type="text" class="form-control" id="persNum" name="persNum" placeholder="000000 00000" title="Fyll ut personnummeret">
     </div>
 
-    <div class="Teksbokser">
-      <div class="Tekstboks">
-        <label for="kjennetegn">Kjennetegn: </label><br>
-        <input type="text" id="kjennetegn" name="kjennetegn" placeholder="GP34985">
-      </div>
-
-      <div class="Tekstboks">
-        <label for="bilmerke">Bilmerke: </label><br>
-        <input type="text" id="bilmerke" name="bilmerke" placeholder="Tesla">
-      </div>
-
-      <div class="Tekstboks">
-        <label for="biltype">Biltype: </label><br>
-        <input type="text" id="biltype" name="biltype" placeholder="E">
-      </div>
-
-      <div class="Tekstboks">
-        <label for="bli farge">bilfarge: </label><br>
-        <input type="text" id="Bilfarge" name="bilfarge" placeholder="blå">
-      </div>
+    <div class="form-group">
+      <label for="fornavn">Eiers fornavn:</label>
+      <input type="text" class="form-control" id="fornavn" name="fornavn" placeholder="Jane" title="Fyll ut fornavn">
     </div>
-  </form>
-  <button onclick="regBil()">Registrer</button>
-  <h2>Alle bilene: </h2>
-  <button onclick="slettAlle()">Slett alle</button>
 
-  <label for="slettPersNum">Personnummer: </label>
-  <input type="text" id="slettPersNum" placeholder="000000 00000">
+    <div class="form-group">
+      <label for="etternavn">Eiers etternavn:</label>
+      <input type="text" class="form-control" id="etternavn" name="etternavn" placeholder="Doe" title="Fyll ut etternavn">
+    </div>
 
-  <button onclick="slettEn()">Slett spesifikk</button>
-  
-  <div id="bilene"></div>
-  <script src="motorvogn.js"></script>
+    <div class="form-group">
+      <label for="adresse">Eiers adresse:</label>
+      <input type="text" class="form-control" id="adresse" name="adresse" placeholder="osloveien 2" title="Fyll ut full adresse (gate, postnummer, sted)">
+    </div>
+  </div>
+
+  <div class="Teksbokser">
+    <div class="form-group">
+      <label for="kjennetegn">Kjennetegn:</label>
+      <input type="text" class="form-control" id="kjennetegn" name="kjennetegn" placeholder="GP34985">
+    </div>
+
+    <div class="form-group">
+      <label for="bilmerke">Bilmerke:</label>
+      <input type="text" class="form-control" id="bilmerke" name="bilmerke" placeholder="Tesla">
+    </div>
+
+    <div class="form-group">
+      <label for="biltype">Biltype:</label>
+      <input type="text" class="form-control" id="biltype" name="biltype" placeholder="E">
+    </div>
+
+    <div class="form-group">
+      <label for="bilfarge">Bilfarge:</label>
+      <input type="text" class="form-control" id="bilfarge" name="bilfarge" placeholder="blå">
+    </div>
+  </div>
+</form>
+<button class="btn btn-primary" onclick="regBil()">Registrer</button>
+<h2>Alle bilene:</h2>
+<button class="btn btn-danger" onclick="slettAlle()">Slett alle</button>
+
+<label for="slettPersNum">Personnummer:</label>
+<input type="text" class="form-control" id="slettPersNum" placeholder="000000 00000">
+
+<button class="btn btn-warning" onclick="slettEn()">Slett spesifikk</button>
+
+<div id="bilene"></div>
+<script src="motorvogn.js"></script>
 </body>
 </html>

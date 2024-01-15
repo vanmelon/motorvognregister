@@ -1,15 +1,18 @@
-.Teksbokser{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    margin-top: 1%;
-    margin-bottom: 1%;
-}
-
+/* .form-group is already a Bootstrap class, you can remove your custom definition */
 .inputBox {
     margin-right: 1%;
 }
 
-tr:nth-child(even) {
-    background-color: lightgray;
+/* Use Bootstrap classes for table striping */
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.05); /* Lighter background color for odd rows */
+}
+
+/* You can also use the built-in spacing classes in Bootstrap to manage margins */
+.mt-1 {
+    margin-top: 0.25rem !important;
+}
+
+.mb-1 {
+    margin-bottom: 0.25rem !important;
 }
