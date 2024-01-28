@@ -6,7 +6,7 @@ function regBil() {
         adresse: $("#adresse").val(),
         kjennetegn: $("#kjennetegn").val(),
         bilmerke: $("#bilmerke").val(),
-        biltype: $("#biltype").val(), // Endret til å hente verdien fra nedtrekkslisten for biltype
+        biltype: $("#biltype").val(),
         bilfarge: $("#bilfarge").val()
     };
 
@@ -96,8 +96,6 @@ function hentModeller() {
 }
 
 function hentModellerForMerke(merke) {
-    // Her kan du legge til logikk for å hente modeller basert på det valgte merket
-    // For eksempel, en liste med modeller for hvert merke
     const modeller = {
         "Tesla": ["Model S", "Model 3", "Model X", "Model Y"],
         "Toyota": ["Corolla", "Camry", "Rav4", "Prius"]

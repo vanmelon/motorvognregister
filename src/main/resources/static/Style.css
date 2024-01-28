@@ -1,14 +1,11 @@
-/* .form-group is already a Bootstrap class, you can remove your custom definition */
 .inputBox {
     margin-right: 1%;
 }
 
-/* Use Bootstrap classes for table striping */
 .table-striped tbody tr:nth-of-type(odd) {
-    background-color: rgba(0, 0, 0, 0.05); /* Lighter background color for odd rows */
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
-/* You can also use the built-in spacing classes in Bootstrap to manage margins */
 .mt-1 {
     margin-top: 0.25rem !important;
 }
