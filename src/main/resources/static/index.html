@@ -7,7 +7,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <style>
-    /* Legg til egendefinerte stiler her */
     .Teksbokser {
       margin-bottom: 20px;
     }
@@ -47,12 +46,18 @@
 
     <div class="form-group">
       <label for="bilmerke">Bilmerke:</label>
-      <input type="text" class="form-control" id="bilmerke" name="bilmerke" placeholder="Tesla">
+      <select class="form-control" id="bilmerke" name="bilmerke" onchange="hentModeller()">
+        <option value="Tesla">Tesla</option>
+        <option value="Toyota">Toyota</option>
+        <!-- Legg til flere bilmerker her etter behov -->
+      </select>
     </div>
 
     <div class="form-group">
-      <label for="biltype">Biltype:</label>
-      <input type="text" class="form-control" id="biltype" name="biltype" placeholder="E">
+      <label for="biltype">Biltype (modell):</label>
+      <select class="form-control" id="biltype" name="biltype">
+        <!-- Modellene vil bli lastet dynamisk basert på det valgte merket -->
+      </select>
     </div>
 
     <div class="form-group">

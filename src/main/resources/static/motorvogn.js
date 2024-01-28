@@ -6,7 +6,7 @@ function regBil() {
         adresse: $("#adresse").val(),
         kjennetegn: $("#kjennetegn").val(),
         bilmerke: $("#bilmerke").val(),
-        biltype: $("#biltype").val(),
+        biltype: $("#biltype").val(), // Endret til å hente verdien fra nedtrekkslisten for biltype
         bilfarge: $("#bilfarge").val()
     };
 
@@ -18,22 +18,22 @@ function regBil() {
         data: JSON.stringify(bil),
         success: function (retur) {
             hentAlle();
+            // Tøm inputfeltene etter lagring
+            $("#persNum").val("");
+            $("#fornavn").val("");
+            $("#etternavn").val("");
+            $("#adresse").val("");
+            $("#kjennetegn").val("");
+            $("#bilmerke").val("");
+            $("#biltype").val("");
+            $("#bilfarge").val("");
         },
         error: function () {
             alert("Feil ved lagring av motorvogn.");
         }
     });
-
-    // Tøm inputfeltene etter lagring
-    $("#persNum").val("");
-    $("#fornavn").val("");
-    $("#etternavn").val("");
-    $("#adresse").val("");
-    $("#kjennetegn").val("");
-    $("#bilmerke").val("");
-    $("#biltype").val("");
-    $("#bilfarge").val("");
 }
+
 
 function hentAlle() {
     $.get("/hentAlle", function (data) {
@@ -81,4 +81,28 @@ function slettEn() {
 
     // Tøm inputfeltet etter sletting
     $("#slettPersNum").val("");
+}
+
+function hentModeller() {
+    const valgtMerke = $("#bilmerke").val();
+    const modeller = hentModellerForMerke(valgtMerke);
+
+    let options = "<option value=''>Velg modell</option>";
+    for (let i = 0; i < modeller.length; i++) {
+        options += "<option value='" + modeller[i] + "'>" + modeller[i] + "</option>";
+    }
+
+    $("#biltype").html(options);
+}
+
+function hentModellerForMerke(merke) {
+    // Her kan du legge til logikk for å hente modeller basert på det valgte merket
+    // For eksempel, en liste med modeller for hvert merke
+    const modeller = {
+        "Tesla": ["Model S", "Model 3", "Model X", "Model Y"],
+        "Toyota": ["Corolla", "Camry", "Rav4", "Prius"]
+        // Legg til flere modeller for andre merker etter behov
+    };
+
+    return modeller[merke] || [];
 }
